@@ -1,0 +1,44 @@
+#main-title {
+  color: blue;
+  font-size: 40px;
+}
+
+header h1 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+main h2{
+    color: red;
+}
+
+nav{
+    color: #d39;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: #000000;
+    background-color: rgb(200, 200, 200);
+}
+
+.bigger{
+    font-size: 15pt;
+    font-weight: bold;
+}
+
+.red {
+    color: red;
+}
+
+.ash {
+    color: rgb(147, 160, 147);
+}
+
+.black{
+    color: black;
+}
+
+footer {
+    color: #dd3399;
+}

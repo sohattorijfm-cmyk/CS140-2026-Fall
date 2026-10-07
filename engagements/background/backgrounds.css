@@ -1,0 +1,29 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: url('bluebg.jpg') repeat;
+    color: white;
+}
+.pipelines{
+    width: 250px;
+}
+
+.surfspots{
+    list-style: url(dot.png);
+}
+
+main {
+  background: url('redFlowerSmall.png') no-repeat center;
+}
+
+.other{
+    background-image: url(bluebg.jpg);
+    background-color: blue;
+    background-repeat: repeat;
+}
+
+.moreother{
+    background-image: url(redFlowerSmall.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+

@@ -4,6 +4,14 @@ body {
     color: rgb(61, 72, 193);
 }
 
+nav a {
+    color: pink;
+}
+
+.current{
+    color: black;
+}
+
 main.flag {
     background: url('japanflag.jpg') no-repeat center right;
 }

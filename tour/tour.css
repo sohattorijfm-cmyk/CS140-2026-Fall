@@ -1,0 +1,13 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: url('Ichimatsu.jpg') repeat;
+    color: rgb(61, 72, 193);
+}
+
+main.flag {
+    background: url('japanflag.jpg') no-repeat center right;
+}
+
+.sushi{
+    list-style: url(sushi.jpeg);
+}

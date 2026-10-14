@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="positioning.css">
+</head>
+<body>
+    <header>
+        <h1>So Hattori Web Design Site</h1>
+    </header>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contaact</a>
+    </nav>
+    <main>
+        <h1>positioning</h1>
+        <figure id="floatfig" class="templefig">
+            <img src="temple.jpg" alt="Laie Hawaii Temple">
+            <figcaption>Laie Hawaii Temple</figcaption>
+        </figure>
+        <p>Lorem ipsum dolor </p>
+        <p>Lorem ipsum dolor .</p>
+        <div class="enforcer"></div>
+         <figure id="relative" class="templefig">
+            <img src="temple.jpg" alt="Laie Hawaii Temple">
+            <figcaption>Relative Laie Hawaii Temple</figcaption>
+        </figure>
+        <figure id="absolute" class="templefig">
+            <img src="temple.jpg" alt="Laie Hawaii Temple">
+            <figcaption>Absolute Laie Hawaii Temple</figcaption>
+        </figure>
+        <figure id="fixed" class="templefig">
+            <img src="temple.jpg" alt="Laie Hawaii Temple">
+            <figcaption>Fixed Laie Hawaii Temple</figcaption>
+        </figure>
+        <h2>Questions</h2>
+        <ul>
+            <li>What is normal flow in HTML?</li>
+            <li>What does float do? Why do you need to clear the float?</li>
+            <li>What do absolute, fixed, and relative do?</li>
+            <li>How can you make nice navigation buttons for mobile devices?</li>
+            <li>Where can you find videos to review what we talked about in class?</li>
+        </ul>
+        <h2>Ansewr</h2>
+        <ul>
+            <li>The default layout where blocks stack vertically and inline elements flow horizontally.</li>
+            <li>Float shifts an element to one side so text wraps around it. Clear forces elements below floats so they don't slide up awkwardly.</li>
+            <li>Relative: Moves relative to its normal spot, leaving an empty gap behind.
+
+            Absolute: Completely removed from flow, positioned relative to its nearest positioned ancestor, leaving no gap.
+
+            Fixed: Locked relative to the browser viewport so it stays in place while scrolling.</li>
+            <li>Set links to display: block so they span the full screen width, creating large, easy-to-tap targets.</li>
+            <li>course modules or media galleries on Canvas</li>
+        </ul>
+    </main>
+    <footer>
+        <p>&copy; 2026 So Hattori</p>
+    </footer>
+</body>
+</html>

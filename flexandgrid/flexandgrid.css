@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.head {
+    background-color: rgb(188, 245, 96);
+    color: rgb(254, 116, 215);
+}
+
+.top {
+    background-color: rgb(241, 248, 146);
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+main h1 {
+    margin: 0%;
+}
+
+main p {
+    margin: 0%;
+}
+
+main h2 {
+    margin: 0%;
+}
+
+
+
+.parent{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.wave{
+    border: 2px solid black;
+    width: 300px;
+    overflow: hidden;
+}
+
+.bottom {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 80px; /* リンク4つ分くらいが収まる高さに調整してください */
+}

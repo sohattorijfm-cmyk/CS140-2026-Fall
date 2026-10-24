@@ -2,9 +2,10 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.head {
+header h1 {
     background-color: rgb(188, 245, 96);
     color: rgb(254, 116, 215);
+    margin: 0%;
 }
 
 .top {
@@ -12,6 +13,12 @@ body {
     display: flex;
     gap: 20px;
     justify-content: space-around;
+}
+
+.aray {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
 }
 
 main h1 {
@@ -30,14 +37,16 @@ main h2 {
 
 .parent{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 2fr 2fr 2fr;
     gap: 10px;
 }
 
 .wave{
     border: 2px solid black;
-    width: 300px;
+    box-shadow: 3px 3px 0px rgba(180, 180, 180, 0.5);
+    width: 100%;
     overflow: hidden;
+    gap: 30px;
 }
 
 .bottom {
@@ -45,5 +54,5 @@ main h2 {
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: space-between;
-    height: 80px; /* リンク4つ分くらいが収まる高さに調整してください */
+    height: 80px; 
 }

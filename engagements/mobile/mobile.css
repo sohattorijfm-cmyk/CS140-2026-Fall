@@ -70,6 +70,42 @@ main {
     color: white;
 }
 
+
+@media ONLY screen AND (max-width: 680px){
+    .mainrow {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .sidebar{
+        width: 100%;
+    }
+
+    main {
+        width: 100%;
+    }
+
+    .card{
+        width: 95%;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    nav a {
+        border-bottom: 1px solid white;
+        padding: 15px 10px;
+    }
+
+    nav a:hover{
+        text-decoration: underline;
+        background-color: white;
+        color: rgb(28, 29, 29);
+    }
+
+}
+
 @media print {
     nav {
         display: none;

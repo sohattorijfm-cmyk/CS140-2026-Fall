@@ -1,0 +1,133 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgb(186, 247, 247);
+}
+
+header {
+    background-color: rgb(161, 250, 125);
+}
+
+header h1 {
+    margin: 0;
+    color: rgb(255, 157, 0);
+}
+
+html {
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    background-color: rgb(246, 255, 151);
+    justify-content: space-around;
+}
+
+nav a {
+    display: rgb(206, 237, 6);
+    padding: 5px 20px;
+    background-color: rgb(97, 231, 255);
+    color: rgb(251, 4, 169);
+}
+
+
+.mainrow {
+   display: flex;
+}
+
+.sidebar {
+    width: 55%;
+}
+
+main {
+    width: 45%;
+}
+
+main h1 {
+    color: rgb(255, 157, 0);
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.card {
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 250px;
+    overflow: hidden;
+}
+
+.card img {
+    width: 100%;
+}
+
+.card h2 {
+    margin: 0;
+}
+
+.card a {
+    display: block;
+    padding: 10px;
+    background-color: rgb(210, 210, 254);
+    width: 60%;
+    margin-bottom: 0 auto 5px auto;
+    border-radius: 5px;
+    color: white;
+}
+
+
+@media ONLY screen AND (max-width: 768px){
+    .mainrow {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .sidebar{
+        width: 100%;
+    }
+
+    main {
+        width: 100%;
+    }
+
+    .card{
+        width: 95%;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    nav a {
+        border-bottom: 1px solid white;
+        padding: 15px 10px;
+    }
+
+    nav a:hover{
+        text-decoration: underline;
+        background-color: white;
+        color: rgb(28, 29, 29);
+    }
+
+}
+
+@media print {
+    nav {
+        display: none;
+    }
+
+    .sidebar{
+        display: none;
+    }
+
+    body {
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    .card {
+        break-inside: avoid;
+    }
+
+}

@@ -4,52 +4,79 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tables</title>
+    <link rel="stylesheet" href="table.css">
 </head>
 <body>
     <header>
         <h1>Sos Web Design</h1>
     </header>
-    <table border="1">
-    <thead>
-        <tr>
-        <th>Year</th>
-        <th>Age</th>
-        <th>Team</th>
-        <th>Homerun</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-        <td>2024</td>
-        <td>30</td>
-        <td>LAD</td>
-        <td>54</td>
-        </tr>
-        <tr>
-        <td>2025</td>
-        <td>31</td>
-        <td>LAD</td>
-        <td>55</td>
-        </tr>
-        <tr>
-        <td>2026</td>
-        <td>32</td>
-        <td>LAD</td>
-        <td>30</td>
-        </tr>
-        <tfoot>
-            <tr>
-            <th scope="row" colspan="3">Total Homerun</th>
-            <td>139</td>
-            </tr>
-        </tfoot>
-    </tbody>
-    </table>
     <main>
-
+        <div class="tablediv">
+        <table id="schedule" >
+            <caption>Shohei Ohtani</caption>
+            <thead>
+                <tr>
+                    <th>Year</th>
+                    <th>Age</th>
+                    <th>Team</th>
+                    <th>Homerun</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="rowgroup" colspan="4">LAA</th>
+                </tr>
+                <tr>
+                    <td>2021</td>
+                    <td>27</td>
+                    <td>Los Angeles Angels</td>
+                    <td>46</td>
+                </tr>
+                <tr>
+                    <td>2022</td>
+                    <td>28</td>
+                    <td>Los Angeles Angels</td>
+                    <td>34</td>
+                </tr>
+                <tr>
+                    <td>2023</td>
+                    <td>29</td>
+                    <td>Los Angeles Angels</td>
+                    <td>44</td>
+                </tr>
+                <tr>
+                    <th scope="rowgroup" colspan="4">LAD</th>
+                </tr>
+                <tr>
+                    <td>2024</td>
+                    <td>30</td>
+                    <td>Los Angeles Dodgers</td>
+                    <td>54</td>
+                </tr>
+                <tr>
+                    <td>2025</td>
+                    <td>31</td>
+                    <td>Los Angeles Dodgers</td>
+                    <td>55</td>
+                </tr>
+                <tr>
+                    <td>2026</td>
+                    <td>32</td>
+                    <td>Los Angeles Dodgers</td>
+                    <td>30</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th scope="row" colspan="3">Total Homerun</th>
+                    <td>139</td>
+                </tr>
+            </tfoot>
+        </table>
+        </div>
     </main>
     <footer>
-        <p>&copy;2026 So Hattori</p>
+        <p>&copy; 2026 So Hattori</p>
     </footer>
 </body>
 </html>

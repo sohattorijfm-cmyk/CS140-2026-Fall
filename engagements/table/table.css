@@ -1,0 +1,28 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.tablediv {
+    overflow-x: auto;
+}
+
+#schedule {
+
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+#schedule tbody th, 
+#schedule thead th {
+    background-color: rgb(70, 70, 173);
+    color: white;
+}
+
+#schedule tbody tr:nth-child(even) {
+    background-color: rgb(169, 215, 255);
+}
+
+#schedule tbody tr td:last-child {
+    text-align: right;
+}

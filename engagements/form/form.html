@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <header>
+        <h1>So's Web Design Class</h1>
+    </header>
+    <main>
+        <form action="formprocessing.html" method="get">
+            <div class="form-row">
+                <label for="personname">Full Name</label>
+                <input id="personname" type="text" name="fullname" placeholder="Full Name">
+            </div>
+            <div class="form-row">
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email">
+            </div>
+            <div class="form-row">
+                <label for="email">Email</label>
+                <input type="password" name="pass">
+            </div>
+            <div class="form-row">
+                <select name="state" id="state">
+                    <option value="blank">------</option>
+                    <option value="CA">CA</option>
+                    <option value="HI">HI</option>
+                    <option value="UT">UT</option>
+                    <option value="NY">NY</option>
+                </select>
+            </div>
+            <div class="form-row">
+                <input type="submit">
+            </div>
+        </form>
+        <h3>1. The form tag has an "action" attribute. What does it do?</h3>
+        <p>The  tag specifies the URL or destination where the form data should be sent for processing when a user clicks the submit button</p>
+
+        <h3>2. The form tag has a "method" attribute. What does it do?</h3>
+        <p>the method attribute inside a form tag specifies how form data is sent to the server</p>
+
+        <h3>3. What is the difference between a "POST" and a "GET"?</h3>
+        <p>GET is used to request (retrieve) data from a server, while POST is used to send (submit) data to a server to create or update a resource</p>
+
+        <h3>4. How do you fill in a form control with a pre-set value, and how is that different from a placeholder? Answer for each of these: text box, textarea, select box, checkbox, and radio button.</h3>
+        <ul>
+            <li>textbox : Use the <code>value</code> attribute (e.g., <code>value="default"</code>).</li>
+            <li>submit : </li>
+            <li>check box : Add the <code>checked</code> attribute to the <code>&lt;input&gt;</code>.<br></li>
+            <li>radio : Add the <code>checked</code> attribute to the desired <code>&lt;input&gt;</code> in the group.</li>
+            <li>select : Add the <code>selected</code> attribute to the desired <code>&lt;option&gt;</code>.</li>
+            <li>text area : Place the text between the opening and closing tags.</li>
+        </ul>
+
+        <h3>5. List all the form controls that HTML5 added. Which ones did you put in your form?</h3>
+        <p>HTML5 added several new input types and controls, including: color, date, datetime-local, email, month, number, range, search, tel, time, url, and week.<br>
+        I put "email" and "date" in my form.</p>
+    </main>
+    <footer>
+        <p>&copy;2026 So Hattori</p>
+    </footer>
+</body>
+</html>

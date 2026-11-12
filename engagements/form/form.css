@@ -1,3 +1,45 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
 }
+
+fieldset {
+    background-color: antiquewhite;
+    border: thin solid black;
+    box-shadow: 3px 3px 3xp rgb(rgb(243, 242, 242));
+}
+
+.form-row input:not([type="submit"]) {
+    padding: 5px;
+    background-color: rgb(244, 245, 247);
+}
+
+.form-row input[type="submit"] {
+    padding: 10px;
+    background-color: rgb(27, 27, 175);
+}
+
+.form-row .check-row{
+    margin: 10px 0;
+    display: flex;
+    gap: 10px;
+}
+
+.form-row label{
+    width: 150px;
+    text-align: right;
+}
+
+.spacer{
+    width: 150px;
+    text-align: right;
+}
+
+@media ONLY screen AND (max-width: 500px){
+    .form-row, .check-row{
+        flex-direction: column;
+    }
+
+    .form-row label{
+        text-align: left;
+    }
+}

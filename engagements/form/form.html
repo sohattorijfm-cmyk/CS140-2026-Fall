@@ -2,43 +2,60 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form</title>
     <link rel="stylesheet" href="form.css">
 </head>
 <body>
-    <header>
-        <h1>So's Web Design Class</h1>
-    </header>
     <main>
-        <form action="formprocessing.html" method="get">
-            <div class="form-row">
-                <label for="personname">Full Name</label>
-                <input id="personname" type="text" name="fullname" placeholder="Full Name">
-            </div>
-            <div class="form-row">
-                <label for="email">Email</label>
-                <input type="text" name="email" id="email">
-            </div>
-            <div class="form-row">
-                <label for="email">Email</label>
-                <input type="password" name="pass">
-            </div>
-            <div class="form-row">
-                <select name="state" id="state">
-                    <option value="blank">------</option>
-                    <option value="CA">CA</option>
-                    <option value="HI">HI</option>
-                    <option value="UT">UT</option>
-                    <option value="NY">NY</option>
-                </select>
-            </div>
-            <div class="form-row">
-                <input type="submit">
-            </div>
+        <form action="formprocessing.html" method="post">
+            <fieldset>
+                <legend>Account</legend>
+                <div class="form-row">
+                    <label for="personname">Full Name</label>
+                    <input id="personname" type="text" name="fullname" placeholder="Full Name">
+                </div>
+                <div class="form-row">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" value="soubou@byuh.edu">
+                </div>
+                <div class="form-row">
+                    <label for="bdate">Birthday</label>
+                    <input type="date" name="bdate" id="bdate">
+                </div>
+                <div class="form-row">
+                    <label for="password">Password</label>
+                    <input type="password" name="pass" id="password">
+                </div>
+                <div class="form-row">
+                    <label for="state">States</label>
+                    <select name="state" id="state">
+                        <option value="blank">------</option>
+                        <option value="CA">CA</option>
+                        <option value="HI">HI</option>
+                        <option value="UT">UT</option>
+                        <option value="NY">NY</option>
+                    </select>
+                </div>
+                <div class="check-row">
+                    <div class="spacer"></div>
+                    <label><input type="checkbox" name="remember">remember me?</label>
+                </div>
+                <div class="form-row">
+                    <div class="spacer">Gender</div>
+                    <label><input type="radio" name="gender" value="male">male</label>
+                    <label><input type="radio" name="gender" value="female">female</label>
+                </div>
+                <div class="form-row">
+                    <label for="comments">Comments</label>
+                    <textarea name="comments" id="comments"></textarea>
+                </div>
+                <div class="form-row">
+                    <input type="submit" value="Sign Up">
+                </div>
+            </fieldset>
         </form>
         <h3>1. The form tag has an "action" attribute. What does it do?</h3>
-        <p>The  tag specifies the URL or destination where the form data should be sent for processing when a user clicks the submit button</p>
+        <p>The tag specifies the URL or destination where the form data should be sent for processing when a user clicks the submit button</p>
 
         <h3>2. The form tag has a "method" attribute. What does it do?</h3>
         <p>the method attribute inside a form tag specifies how form data is sent to the server</p>
@@ -59,6 +76,15 @@
         <h3>5. List all the form controls that HTML5 added. Which ones did you put in your form?</h3>
         <p>HTML5 added several new input types and controls, including: color, date, datetime-local, email, month, number, range, search, tel, time, url, and week.<br>
         I put "email" and "date" in my form.</p>
+
+        <h3>What are different ways to style your form?</h3>
+        <p>style a form using several methods depending on your project type, ranging from native CSS properties to modern layout tools and quick tint adjustments</p>
+
+        <h3>Why does the professor like to use flex?</h3>
+        <p>it gives them and their students greater adaptability, efficiency, and engagement.</p>
+
+        <h3>What makes for a good mobile form?</h3>
+        <p>A good mobile form is short, fast to load, and easy to navigate with one hand on a small touchscreen.</p>
     </main>
     <footer>
         <p>&copy;2026 So Hattori</p>

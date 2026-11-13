@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Form</title>
+    <link rel="stylesheet" href="projectfrom.css">
+</head>
+<body>
+    <header>
+        <h1>Cafe Menu Request</h1>
+    </header>
+    <main>
+        <form action="projectform.html" method="post">
+            <fieldset>
+            <legend>Cafe Menu Request</legend>
+                <div class="form-row">
+                    <label for="personname">Full Name</label>
+                    <input type="text" name="fullname" id="personname" placeholder="Full Name">
+                </div>
+                <div class="form-row">
+                    <label for="studentID">Studen ID</label>
+                    <input type="text" name="number" id="studentID" placeholder="7 numbers">
+                </div>
+                <div class="form-row">
+                    <label for="password">Password</label>
+                    <input type="password" name="pass" id="password">
+                </div>
+                <div class="form-row">
+                    <div class="spacer">Gender</div>
+                    <label><input type="radio" name="gender" value="male">male</label>
+                    <label><input type="radio" name="gender" value="female">female</label>
+                </div>
+                <div class="form-row">
+                    <label for="comments">Your Requested Food</label>
+                    <textarea name="comments" id="comments" placeholder="Write the Name of Your Requested Food"></textarea>
+                </div>
+                <div class="form-row">
+                    <label for="foodorigin">Food Origin</label>
+                    <select name="origin" id="origin">
+                        <option value="blank">------</option>
+                        <option value="Main Land">United States</option>
+                        <option value="Hawaii">Hawaiian</option>
+                        <option value="Asia">Asian</option>
+                        <option value="Polynesia">Polynesian</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="check-row">
+                    <div class="spacer"></div>
+                        <ul>
+                            <li>
+                            <label>
+                                <input type="checkbox" name="serve_time" value="morning"> Morning
+                            </label>
+                            </li>
+                            <li>
+                            <label>
+                                <input type="checkbox" name="serve_time" value="lunch"> Lunch
+                            </label>
+                            </li>
+                            <li>
+                            <label>
+                                <input type="checkbox" name="serve_time" value="dinner"> Dinner
+                            </label>
+                            </li>
+                        </ul>
+                    </div>
+                <div class="form-row">
+                    <input type="submit" value="Send">
+                </div>
+            </fieldset>
+        </form>
+    </main>
+</body>
+<footer>
+    <p>&copy;2026 So Hattori</p>
+</footer>
+</html>

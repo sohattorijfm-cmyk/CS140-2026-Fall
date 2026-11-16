@@ -1,0 +1,113 @@
+/* style.css */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* 全体はスッキリと洗練されたモダンフォント */
+    font-family: 'Plus Jakarta Sans', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+    background: linear-gradient(180deg, #b8cce0 0%, #dce7f2 45%, #f5f2e6 100%);
+    color: #1e293b;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* 背景の光の粒（きらめき効果） */
+body::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(rgba(255, 255, 255, 0.9) 1.5px, transparent 0),
+        radial-gradient(rgba(255, 255, 255, 0.7) 1px, transparent 0);
+    background-size: 50px 50px, 30px 30px;
+    background-position: 0 0, 15px 15px;
+    opacity: 0.7;
+    z-index: 1;
+}
+
+.container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 500px;
+    background: rgba(255, 255, 255, 0.78);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    border-radius: 24px;
+    padding: 40px 28px;
+    box-shadow: 0 15px 35px rgba(100, 116, 139, 0.15);
+}
+
+/* タイトルは上品なイタリックのセリフ体 */
+h1 {
+    text-align: center;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    font-style: italic;
+    margin-bottom: 32px;
+    letter-spacing: 3px;
+    color: #0f172a;
+    text-shadow: 0 2px 10px rgba(255, 255, 255, 0.8);
+}
+
+.program-list {
+    list-style: none;
+}
+
+.program-item {
+    margin-bottom: 22px;
+    text-align: center;
+    padding: 10px 12px;
+    border-radius: 12px;
+    transition: background 0.3s ease;
+}
+
+.program-item:hover {
+    background: rgba(255, 255, 255, 0.65);
+}
+
+/* 項目タイトル・出演者名も優雅なセリフ体にして統一感をアップ */
+.title-role {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.35rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: #0f172a;
+    margin-bottom: 3px;
+}
+
+.name {
+    font-size: 0.92rem;
+    font-weight: 500;
+    color: #334155;
+    letter-spacing: 0.3px;
+}
+
+/* 曲名は読みやすさと上品さを両立 */
+.song-item {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: #2563eb;
+    margin-top: 4px;
+    line-height: 1.5;
+}
+
+.footer-note {
+    text-align: center;
+    margin-top: 35px;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic;
+    font-size: 0.95rem;
+    color: #64748b;
+}

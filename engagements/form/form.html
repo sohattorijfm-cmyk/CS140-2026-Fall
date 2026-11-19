@@ -54,16 +54,13 @@
                 </div>
             </fieldset>
         </form>
-        <h2>Nov 16th Egagement Questions</h2>
-        <h3>What is JavaScript? How did it get its name?</h3>
-        <p>JavaScript is a high-level programming language primarily used to make websites interactive and dynamic. JavaScript was created in 1995 by Brendan Eich at Netscape in just 10 days. Originally called Mocha and then LiveScript, it was renamed **JavaScript** as a marketing move to capitalize on the popularity of Sun Microsystems' Java—even though the two languages are completely unrelated.</p>
+        <h2>Nov 18th Egagement Questions</h2>
+        <h3>What is AJAX?</h3>
+        <p>AJAX stands for Asynchronous JavaScript and XML. It is not a programming language; it is a set of web development techniques used to build faster and more interactive web applications</p>
         <h3>What are the two ways you can run JavaScript?</h3>
-        <ul>
-            <li>Internally (Inline in HTML): Writing the JavaScript code directly inside an HTML file using script tags (usually placed just before the closing /body tag).</li>
-            <li>Externally (Separate .js file): Writing the JavaScript code in a separate file ending in .js (e.g., script.js) and linking it to the HTML file using <script src="script.js"></script></li>
-        </ul>
-        <h3>What is jQuery? Is it still popular today?</h3>
-        <p>It is a lightweight, open-source JavaScript library designed to simplify web development. It is still widely present on the web, but rarely chosen for new projects.</p>
+        <p>Separating HTML (structure) from JavaScript (behavior) keeps the code organized, making it easier to manage and modify. Furthermore, a single file can be reused across multiple pages, and the browser's caching mechanism helps speed up page loading.</p>
+        <h3>How do you use the inspector (DevTools) to debug your JavaScript? How do you find the line number of an error?</h3>
+        <p>You use browser DevTools to debug JavaScript by opening the panel (right-click Inspect or press F12 / Cmd+Option+I on Mac / Ctrl+Shift+I on Windows), checking the Console tab for error messages and console.log() output, inspecting the Network tab to verify requests (such as submit.json in your AJAX form), and setting breakpoints in the Sources tab to step through code.</p>
         <h3>What is the most popular front-end js library today?</h3>
         <p>The most popular front-end JavaScript library today is React</p>
         <h3>How does your code prevent the form from being submitted? Why do we need to prevent it?</h3>
@@ -73,34 +70,47 @@
         <p>&copy;2026 So Hattori</p>
     </footer>
     <script>
-        document.getElementById('myForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            //alert("Form Submitted");
-
-            const fullname = document.getElementById('fullname').value;
-            const email = document.getElementById('email').value;
-            const password = document.getElementById('pass').value;
-            const age = document.getElementById('bdate').value;
-
-            if (!fullname || !email) {
-            alert("You need a name and email.");
+    document.getElementById('myForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const firstName = document.getElementById('firstName').value;
+        const lastName = document.getElementById('lastName').value;
+        const age = document.getElementById('age').value;
+        const birthDate = document.getElementById('birthdate').value;
+        if (!firstName || !lastName) {
+            alert('First Name and Last Name cannot be blank.');
             return;
-            }
-
-            if (!age || age < 18) {
-            alert("You need to be 18");
+        }
+        if (!age || age < 18) {
+            alert('You must be 18 years or older to submit this form.');
             return;
+        }
+        const formData = {
+            firstName: firstName,
+            lastName: lastName,
+            password: document.getElementById('password').value,
+            remember: document.getElementById('remember').checked,
+            state: document.getElementById('state').value,
+            birthDate: birthDate,
+        };
+
+        console.log(formData);
+        const xhr = new XMLHttpRequest();
+        xhr.open("GET", "submit.json", true);
+        xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                //alert('Form submitted successfully.');
+                message = document.getElementById('message');
+                const response = JSON.parse(xhr.responseText);
+                message.textContent = response.message;
+            } else if (xhr.readyState === 4) {
+                alert('Error submitting form.');
             }
-
-            const formData = {
-            name: fullname,
-            email: email,
-            password: password,
-            age: age
-            };
-
-            console.log(formData);
-        });
+        };
+        
+        xhr.send(JSON.stringify(formData));
+        alert(`Success: ${firstName} ${lastName}`);
+    });
     </script>
 </body>
 </html>

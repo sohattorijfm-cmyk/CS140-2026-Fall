@@ -11,7 +11,7 @@
         <h1>Cafe Menu Request</h1>
     </header>
     <main>
-        <form action="projectform.html" method="post">
+        <form id="myForm" action="projectform.html" method="post">
             <fieldset>
             <legend>Cafe Menu Request</legend>
                 <div class="form-row">
@@ -19,7 +19,7 @@
                     <input type="text" name="fullname" id="personname" placeholder="Full Name">
                 </div>
                 <div class="form-row">
-                    <label for="studentID">Studen ID</label>
+                    <label for="studentID">Student ID</label>
                     <input type="text" name="number" id="studentID" placeholder="7 numbers">
                 </div>
                 <div class="form-row">
@@ -28,8 +28,15 @@
                 </div>
                 <div class="form-row">
                     <div class="spacer">Gender</div>
-                    <label><input type="radio" name="gender" value="male">male</label>
-                    <label><input type="radio" name="gender" value="female">female</label>
+                    <label><input type="radio" name="gender" id="male" value="male">male</label>
+                    <label><input type="radio" name="gender" id="female" value="female">female</label>
+                </div>
+                <div class="form-row">
+                    <div class="spacer">Year</div>
+                    <label><input type="radio" name="year" id="freshman" value="Freshman">Freshman</label>
+                    <label><input type="radio" name="year" id="sophomore" value="Sophomore">Sophomore</label>
+                    <label><input type="radio" name="year" id="junior" value="Junior">Junior</label>
+                    <label><input type="radio" name="year" id="senior" value="Senior">Senior</label>
                 </div>
                 <div class="form-row">
                     <label for="comments">Your Requested Food</label>
@@ -48,32 +55,34 @@
                 </div>
                 <div class="check-row">
                     <div class="spacer"></div>
-                        <ul>
-                            <li>
+                    <ul>
+                        <li>
                             <label>
-                                <input type="checkbox" name="serve_time" value="morning"> Morning
+                                <input type="checkbox" name="serve_time" id="morning" value="morning"> Morning
                             </label>
-                            </li>
-                            <li>
+                        </li>
+                        <li>
                             <label>
-                                <input type="checkbox" name="serve_time" value="lunch"> Lunch
+                                <input type="checkbox" name="serve_time" id="lunch" value="lunch"> Lunch
                             </label>
-                            </li>
-                            <li>
+                        </li>
+                        <li>
                             <label>
-                                <input type="checkbox" name="serve_time" value="dinner"> Dinner
+                                <input type="checkbox" name="serve_time" id="dinner" value="dinner"> Dinner
                             </label>
-                            </li>
-                        </ul>
-                    </div>
+                        </li>
+                    </ul>
+                </div>
                 <div class="form-row">
                     <input type="submit" value="Send">
                 </div>
             </fieldset>
         </form>
+        <p id="message"></p>
     </main>
     <footer>
         <p>&copy;2026 So Hattori</p>
     </footer>
+    <script src="projectform.js"></script>
 </body>
 </html>
